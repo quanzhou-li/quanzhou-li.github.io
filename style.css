@@ -157,6 +157,7 @@ a.article-title:hover {
 
 #CV {
   background: url('academic.png') no-repeat;
+  background-position: top center;
 }
 
 #Posts {
