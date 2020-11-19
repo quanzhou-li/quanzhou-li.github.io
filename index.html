@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="resources/manipulator.ico">
+  <title>Zhanpeng He</title>
+  <link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    body {
+      font-family: 'Ovo', serif;
+    }
+    a {
+    color: #1772d0;
+    text-decoration:none;
+    }
+    a:focus, a:hover {
+    color: #f09228;
+    text-decoration:none;
+    }
+    .compact {
+      margin-block-start: 0.2em;
+      margin-block-end: 0.2em;
+    }
+
+    #contact{
+      font-size: 9pt;
+      font-family: "Courier New";
+    }
+
+    #photo {
+      float: right;
+    }
+
+    #photo img {
+      width: 200px;
+      border-radius: 20px;
+      margin: 0 0 1em 1em;
+    }
+
+    @media (max-width: 600px) {
+      #photo img {
+        width: 140px;
+        border-radius: 50%;
+      }
+      .researchimage{
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+
+    #container {
+      margin: 0 5px 0 5px;
+    }
+
+    @media (min-width: 600px) {
+      #container {
+        width: 700px;
+        margin: 0 auto;
+        margin-top: 60px;
+      }
+      .researchimagetd{
+         width: 30%;
+      }
+      .researchtext{
+        width: 70%;
+      }
+      .researchimage{
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      table tr {
+        display: block;
+      }
+  
+      table td {
+        display: block;
+      }
+
+      .researchimagetd{
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
+      }
+      .researchtext{
+        width: 95%;
+        text-align: left;
+      }
+      .researchimage{
+        width: 50%;
+        margin-right: 2em;
+
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="photo">
+      <img src="./resources/photo.jpg" alt="Photo">
+    </div>
+
+    <h1>Zhanpeng He</h1>
+    <p id="contact">
+      Email: [firstname] at cs dot columbia dot edu
+    </p>
+
+    <p>
+      <a href="./resources/cv_zhanpeng_he.pdf">CV</a> /
+      <a href="https://scholar.google.com/citations?user=A8ViYlsAAAAJ">Google Scholar</a> /
+      <a href="https://github.com/zhanpenghe">GitHub</a>
+      <!-- <a style="text-decoration:none" href="https://zhanpenghe.github.io/lolli">🐶</a> -->
+    </p>
+
+    <p>
+      I am a first-year Ph.D student working on reinforcement learning, meta-learning and robotics at Columbia University. I am advised by Professor <a href="https://roam.me.columbia.edu/matei-ciocarlie">Matei Ciocarlie</a> and Professor <a href="https://shurans.github.io/">Shuran Song</a> and am a member of <a href="https://roam.me.columbia.edu/">Robotic Manipulation and Mobility Lab</a>.
+      <br><br>
+      Before joining CU, I recieved a master's degree from University of Sourthern California, where I worked as a research assistant at the <a href="https://robotics.usc.edu/resl/">Robotic Embedded System Laboratory</a> and advised by Professor <a href="http://www-robotics.usc.edu/~gaurav/">Gaurav Sukhatme</a> and Professor <a href="https://stefan-schaal.net/">Stefan Schaal</a>. Before joining USC, I received a Bachelor of Science degree in Computer Science from the Rutgers University.
+    </p>
+
+    <!-- <h3>News</h3>
+    <ul>
+      <li>[2019-08] I joined Columbia University for my Ph.D study!</li>
+      <li>[2018-12] Our work on "Simulator Predictive Control" is presented at NeurIPS 2018 Deep RL Workshop!</li>
+      <li>[2018-11] Our <a href="https://github.com/ryanjulian/embed2learn">codes</a> of "Learning Composable Robot Skills" is open sourced!</li>
+      <li>[2018-11] "Learning Composable Robot Skills" is presented at ISER 2018!</li>
+    </ul> -->
+
+    <h3>Research Interests</h3>
+    <ul>
+      <li>Robotics and robot learning</li>
+      <li>Machine learning, reinforcement learning and meta learning</li>
+    </ul>
+
+    <h3 style="margin-block-end: 0em">Research Projects</h3>
+    <!-- <small>Note: * - denotes equal contribution.</small> -->
+    <table class="compact" width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+      <tbody style="margin-block-start: 0em"><tr>
+        <td class="researchimagetd">
+          <div>
+              <img src="./resources/few_shot_irl.gif" class="researchimage">
+          </div>
+        </td>
+        <td valign="top" class="researchtext">
+          <p class="compact"><a href="http://crlab.cs.columbia.edu/squirl/"><i>SQUIRL: Robust and Efficient Learning from Video Demonstration of Long-Horizon Robotic Manipulation Tasks</i></a></p>
+          <p class="compact">Bohan Wu, Feng Xu, <b>Zhanpeng He</b>, Abhi Gupta and Peter K. Allen. </p>
+          <a href="http://crlab.cs.columbia.edu/squirl/">website</a> / <a href="https://www.youtube.com/watch?v=ODjW2F5B0-A&feature=youtu.be">video</a>
+          <p class="compact"> 
+            This paper aims to address the commonly-known IRL sample efficiency challenge with a robust, sample-efficient, and general meta-IRL algorithm, SQUIRL, that performs a new but related long-horizon task robustly given only a single video demonstration.
+          </p>
+        </td>
+        </tr>
+      </tbody>
+      <tbody style="margin-block-start: 0em"><tr>
+        <td class="researchimagetd">
+          <div>
+              <img src="./resources/metalearning.png" class="researchimage">
+          </div>
+        </td>
+        <td valign="top" class="researchtext">
+          <p class="compact"><a href="#"><i>Demystifying Reproducibility in Meta- and Multi-Task Reinforcement Learning</i></a></p>
+          <p class="compact">Ryan Julian, K.R. Zentner, Avnish Narayan, Tsan Kwong Wong, Yonghyun Cho, Keren Zhu, Linda Wong, Chang Su, <b>Zhanpeng He</b>,  Karol Hausman and Gaurav Sukhatme</p>
+          <a href="#">Paper coming soon!</a>
+          <p class="compact"> 
+            Establishing the significance of experimental results in reinforcement learning (RL) is difficult. This is compounded by the additional complexity of meta- and multi-task RL, a rapidly-growing research area which lacks well-defined baselines. We analyze several design decisions each author must make when they implement a meta-RL or MTRL algorithm, and show that these seemingly-small details can create variations in a single algorithm's performance that exceed the reported performance differences between algorithms themselves.
+          </p>
+        </td>
+        </tr>
+      </tbody>
+        <tbody style="margin-block-start: 0em"><tr>
+          <td class="researchimagetd">
+            <div>
+                <img src="./resources/metaworld.gif" class="researchimage">
+            </div>
+          </td>
+          <td valign="top" class="researchtext">
+            <p class="compact"><a href="https://meta-world.github.io/"><i>Meta-World: A Benchmark and Evaluation for Multi-Task and Meta- Reinforcement Learning</i></a></p>
+            <p class="compact">Tianhe Yu<sup>*</sup>, Deirdre Quillen<sup>*</sup>, <b>Zhanpeng He<sup>*</sup></b>, Ryan C Julian, Karol Hausman, Sergey Levine and Chelsea Finn. </p>
+            <a href="https://meta-world.github.io/">website</a> / <a href="https://github.com/rlworkgroup/metaworld">codes</a> / <a href="./publications/meta_world.pdf">paper</a>
+            <p class="compact"> 
+              In this paper, we propose an open-source simulated benchmark for meta-reinforcement learning and multi-task learning consisting of 50 distinct robotic manipulation tasks, with the aim of making it possible to develop algorithms that generalize to accelerate the acquisition of entirely new, held-out tasks. We evaluate 6 state-of-the-art meta-reinforcement learning and multi-task learning algorithms on these tasks. Surprisingly, while each task and its variations (e.g., with different object positions) can be learned with reasonable success, these algorithms struggle to learn with multiple tasks at the same time, even with as few as nine distinct training tasks. Our analysis and open-source environments pave the way for future research in multi-task learning and meta-learning that can enable meaningful generalization, thereby unlocking the full potential of these methods.
+            </p>
+          </td>
+          </tr>
+        </tbody>
+        <tbody style="margin-block-start: 0em"><tr>
+          <td class="researchimagetd">
+            <div>
+                <img src="./resources/mpc.png" class="researchimage">
+            </div>
+          </td>
+          <td valign="top" class="researchtext">
+            <p class="compact"><a href="./publications/mpc_embeddings_nips.pdf"><i>Simulator Predictive Control: Using Learned Task Representations and MPC for Zero-Shot Generalization and Sequencing</i></a></p>
+            <p class="compact"><b>Zhanpeng He<sup>*</sup></b>, Ryan C Julian<sup>*</sup>, Eric Heiden, Hejia Zhang, Stefan Schaal, Joseph Lim, Gaurav S Sukhatme, and Karol Hausman. </p>
+            <a class="compact" href="https://arxiv.org/abs/1810.02422">arXiv</a> / <a class="compact" href="https://github.com/ryanjulian/embed2learn">code</a> / <a href="https://www.youtube.com/watch?v=te4JWe7LPKw&feature=youtu.be">video</a>
+            <p class="compact"> 
+             We present a method to efficiently performing new robotic tasks directly on a real robot, based on model-predictive control (MPC) and learned task representations. This work is published in <strong>Conference on Neural Information Processing Systems 2018 Deep RL Workshop</strong>.
+            </p>
+          </td>
+          </tr>
+        </tbody>
+        
+        <tbody style="margin-block-start: 0em"><tr>
+          <td class="researchimagetd">
+            <div>
+                <img src="./resources/iser_2018_sim2real.jpg" class="researchimage">
+            </div>
+          </td>
+          <td valign="top" class="researchtext">
+            <p class="compact"><a href="https://arxiv.org/abs/1809.10253"><i>Scaling Simulation-to-real Transfer by Learning Composable Robot Skills</i></a></p>
+            <p class="compact">Ryan C Julian<sup>*</sup>, Eric Heiden<sup>*</sup>, <strong>Zhanpeng He</strong>, Hejia Zhang, Stefan Schaal, Joseph Lim, Gaurav S Sukhatme, and Karol Hausman.</p>
+            <a class="compact" href="https://arxiv.org/abs/1809.10253">arXiv</a> / <a class="compact" href="https://github.com/ryanjulian/embed2learn">code</a> / <a href="https://www.youtube.com/watch?v=Syr2RQTHqTs">video</a>
+            <p class="compact"> 
+            We present a novel solution to the problem of simulation-to-real transfer, which builds on recent advances in robot skill decomposition. This work is published in the <strong>International Symposium on Experimental Robotics</strong>. Springer, 2018.
+            </p>
+          </td>
+          </tr>
+        </tbody>
+    </table>
+    
+    <h3>Softwares</h3>
+    I am a member of <a href="https://github.com/rlworkgroup">rlworkgroup</a> and take part in development of several robot-learning-related open-source projects.
+    <ul>
+      <li><a href="https://github.com/rlworkgroup/garage.git"><b>Garage</b></a>: A toolkit for reproducible reinforcement learning research.</li>
+      <li><a href="https://github.com/rlworkgroup/dowel"><b>Dowel</b></a>: A little logger for machine learning research.</li>
+      <li><a href="https://meta-world.github.io/"><b>Meta-World</b></a>: A collection of environments for benchmarking meta-learning and multi-task reinforcement learning algorithms.</li>
+    </ul>
+
+
+    <h3>Experiences</h3>
+    <p>
+      Before joining RESL, I also worked at <a href="https://www.isi.edu/robots/">Polymorphic Robotics Labotory</a> as a research assistant under supervision of Professor <a href="https://www.isi.edu/~shen/">Wei-Min Shen</a>. There, I mainly worked on building robotic system and an Unreal engine simulation for the multi-UAV navigation project. 
+    </p>
+
+    <p>
+      From 2016 to 2017, I was a software development engineer at IoT Eye Inc. at piscataway, New Jersey.
+    </p>
+
+    <p>
+      From June to August 2016, I interned as a software development engineer at the Research Department of VipShop.com.
+    </p>
+
+    <p>
+      From 2015 to 2017, I was a teaching assistant for CS111 in Rutgers University.
+    </p>
+  </div>
+</body></html>
