@@ -73,7 +73,7 @@
   </div>
 </section>
 
-<section>
+<!-- <section>
   <div class="container" style="width:58%">
     <div class="row">
       <div class="col-12 text-center">
@@ -98,7 +98,7 @@
     </div>
   </div>
 </section>
-<br>
+<br> -->
 
 <!-- abstract -->
 <section>
@@ -108,11 +108,13 @@
         <h2><strong>Abstract</strong></h2>
         <hr style="margin-top:0px">
         <p class="text-justify">
-          Grasping in cluttered scenes remains highly challenging for dexterous hands due to the scarcity of data. 
-To address this problem, we present a large-scale synthetic benchmark, encompassing 1319 objects, 8270 scenes, and 427 million grasps. 
-Beyond benchmarking, we also propose a novel two-stage grasping method that learns efficiently from data by using a diffusion model that conditions on local geometry.
-Our proposed generative method outperforms all baselines in simulation experiments. 
-Furthermore, with the aid of test-time-depth restoration, our method demonstrates zero-shot sim-to-real transfer, attaining 90.7%  real-world dexterous grasping success rate in cluttered scenes. 
+          Learning to generate dual-hand grasps that respect object semantics is essential for robust hand–object interaction but remains largely underexplored due to dataset scarcity. 
+          Existing grasp datasets predominantly focus on single-hand interactions and contain only limited semantic part annotations. 
+          To address these challenges, we introduce a pipeline, SymOpt, that constructs a large-scale dual-hand grasp dataset by leveraging existing single-hand datasets and exploiting object and hand symmetries. 
+          Building on this, we propose a text-guided dual-hand grasp generator, DHAGrasp, that synthesizes Dual-Hand Affordance-aware Grasps for unseen objects. 
+          Our approach incorporates a novel dual-hand affordance representation and follows a two-stage design, 
+          which enables effective learning from a small set of segmented training objects while scaling to a much larger pool of unsegmented data. 
+          Extensive experiments demonstrate that our method produces diverse and semantically consistent grasps, outperforming strong baselines in both grasp quality and generalization to unseen objects.
         </p>
       </div>
     </div>
