@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="google-site-verification" content="DOiC7afK4KluEKATjy_DTThhZgLh6My7TjPNXdbI8u4" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DexGraspNet 2.0: Learning Generative Dexterous Grasping in Large-scale Synthetic Cluttered Scenes</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      background: rgb(255, 255, 255) no-repeat fixed top left;
+      font-family: 'Open Sans', sans-serif;
+    }
+  </style>
+
+</head>
+
+<!-- cover -->
+<section>
+  <div class="jumbotron text-center mt-0">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h2 style="font-size:30px;">DexGraspNet 2.0: Learning Generative Dexterous Grasping in Large-scale Synthetic Cluttered Scenes</h2>
+          <h4 style="color:#6e6e6e;"> CoRL 2024 </h4>
+          <hr>
+          <h6>
+            <a href="https://mzhmxzh.github.io/">Jialiang Zhang</a><sup>1,2,*</sup>&nbsp; &nbsp;
+            <a href="https://lhrrhl0419.github.io/"> Haoran Liu</a><sup>1,2,*</sup>&nbsp; &nbsp;
+            <a href="https://danshi-li.github.io/personal-website//">Danshi Li</a><sup>2,*</sup>&nbsp; &nbsp;
+            <a href="https://xinqiangyu.github.io/xinqiang-yu.github.io/index.html/">Xinqiang Yu</a><sup>2,*</sup>&nbsp; &nbsp;
+            <a href="https://geng-haoran.github.io/">Haoran Geng</a><sup>1,2,3</sup>&nbsp; &nbsp;
+            <a href="https://selina2023.github.io/"> Yufei Ding</a><sup>1,2</sup>&nbsp; &nbsp;
+            <a href="https://jychen18.github.io/">Jiayi Chen</a><sup>1,2</sup>&nbsp; &nbsp;
+            <a href="https://hughw19.github.io/">He Wang</a><sup>1,2,4,†</sup>
+            <br>
+            <br>
+            <p> <sup>1</sup>CFCS, School of Computer Science, Peking University&nbsp; &nbsp;
+              <sup>2</sup>Galbot&nbsp; &nbsp;
+              <sup>3</sup>UC Berkeley&nbsp; &nbsp;
+              <sup>4</sup>Beijing Academy of Artificial Intelligence&nbsp; &nbsp;
+              <br>
+            </p>
+            <p> <sup>*</sup> equal contributions &nbsp;
+              <sup>†</sup> corresponding author &nbsp;
+              <br>
+            </p>
+
+            <div class="row justify-content-center">
+              <div class="column">
+                <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/pdf/2410.23004" role="button"
+                    target="_blank">
+                    <i class="fa fa-file"></i> Paper </a> </p>
+              </div>
+              <div class="column">
+                <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon"
+                    href="https://github.com/PKU-EPIC/DexGraspNet2" role="button" target="_blank" disabled=1>
+                    <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div>
+              <div class="column">
+                <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon"
+                    href="https://huggingface.co/datasets/lhrlhr/DexGraspNet2.0" role="button" target="_blank"
+                    disabled=1>
+                    <i class="fa fa-github-alt"></i> Dataset </a> </p>
+              </div>
+            </div>
+            
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12 text-center">
+        <hr style="margin-top:0px">
+        <div class="row justify-content-center" style="align-items:center; display:flex;">
+          <img src="images/teaser7.pdf" alt="input" class="img-responsive" width="90%" />
+          <br>
+        </div>
+        <!-- <p class="text-justify">
+          A visualization of DexGraspNet. DexGraspNet contains 1.32M grasps of ShadowHand on
+          5355 objects, which is two orders and one order of magnitudes larger than the previous set from DDG. It
+          features diverse types of grasping that can't be achieved using GraspIt!.
+        </p> -->
+        <p class="text-justify">
+          <b>Simulation set </b>
+          : DexGraspNet 2.0 contains 427M grasps (4 random grasps are visualized in each scene here for clarity). <br>
+          <b>Real-world Execution </b>
+          : first row are model-generated grasps conditioned on real-world single-view depth point clouds, second row are top-ranked grasps, and third row are real-world executions. 
+        </p>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<!-- abstract -->
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>Abstract</strong></h2>
+        <hr style="margin-top:0px">
+        <p class="text-justify">
+          Grasping in cluttered scenes remains highly challenging for dexterous hands due to the scarcity of data. 
+To address this problem, we present a large-scale synthetic benchmark, encompassing 1319 objects, 8270 scenes, and 427 million grasps. 
+Beyond benchmarking, we also propose a novel two-stage grasping method that learns efficiently from data by using a diffusion model that conditions on local geometry.
+Our proposed generative method outperforms all baselines in simulation experiments. 
+Furthermore, with the aid of test-time-depth restoration, our method demonstrates zero-shot sim-to-real transfer, attaining 90.7%  real-world dexterous grasping success rate in cluttered scenes. 
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>Video</strong></h2>
+        <hr style="margin-top:0px">
+        <div class="row justify-content-center" style="align-items:center; display:flex;">
+          <video width="90%" playsinline="" preload="" muted="" controls>
+            <source src="videos/Supplementary_video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<br>
+<br>
+
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <!-- <h2><strong>Qualitative results</strong></h2> -->
+        <h2><strong>set</strong></h2>
+        <hr style="margin-top:0px">
+        <img src="images/set.pdf" width="100%" style="margin-bottom:20px;">
+        <p class="text-justify">
+          <!-- Some diverse grasps on the objects from DexGraspNet. -->
+          Some synthetic training scenes and grasping pose from DexGraspNet 2.0.
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<br>
+<br>
+<section></section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>Qualitative results</strong></h2> 
+        <!-- <h2><strong>set</strong></h2> -->
+        <hr style="margin-top:0px">
+        <img src="images/result_1.png" width="45%" style="margin-bottom:20px;">
+        <img src="images/result_2.png" width="45%" style="margin-bottom:20px;">
+        <img src="images/result_3.png" width="45%" style="margin-bottom:20px;">
+        <img src="images/result_4.png" width="45%" style="margin-bottom:20px;">
+        <img src="images/result_5.png" width="45%" style="margin-bottom:20px;">
+        <img src="images/result_6.png" width="45%" style="margin-bottom:20px;">
+        <img src="images/result_7.png" width="45%" style="margin-bottom:20px;">
+        <img src="images/result_8.png" width="45%" style="margin-bottom:20px;">
+        
+        <p class="text-justify">
+          <!-- Some diverse grasps on the objects from DexGraspNet. -->
+          Dexterous grasping generation and real-world execution in a cluttered scene.
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<br>
+<br>
+
+<!-- citing -->
+<div class="container" style="width:58%">
+  <div class="row ">
+    <div class="col-12">
+      <h2><strong>Citation</strong></h2>
+      <hr style="margin-top:0px">
+      <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>
+  @inproceedings{zhangdexgraspnet,
+    title={DexGraspNet 2.0: Learning Generative Dexterous Grasping in Large-scale Synthetic Cluttered Scenes},
+    author={Zhang, Jialiang and Liu, Haoran and Li, Danshi and Yu, XinQiang and Geng, Haoran and Ding, Yufei and Chen, Jiayi and Wang, He},
+    booktitle={8th Annual Conference on Robot Learning}
+  }
+</code></pre>
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- license -->
+<section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>License</strong></h2>
+        <hr style="margin-top:0px">
+        <p class="text-justify">
+          This work and the set are licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+  
+<!-- Contact -->
+<div class="container" style="width:58%">
+  <div class="row ">
+    <div class="col-12">
+      <h2><strong>Contact</strong></h2>
+      <hr style="margin-top:0px">
+      <p>If you have any questions, please feel free to contact
+        <b>Jialiang Zhang</b> at zhangjialiang@stu.pku.edu.cn, <b>Haoran Liu</b> at lhrrhl0419@stu.pku.edu.cn, <b>Danshi Li</b> at danshi.li.academia@gmail.com, <b>Xinqiang Yu</b> at yuxinqiang@galbot.com, and <b>He Wang</b> at hewang@pku.edu.cn.
+      </p>
+      </pre>
+    </div>
+  </div>
+</div>
+
+
+
+<footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+  <hr>
+  Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a
+    href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+</footer>
+<script>
+  MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</body>
+
+</html>
 
