@@ -109,6 +109,32 @@
   </div>
 </section>
 <br>
+  
+<section></section>
+  <div class="container" style="width:58%">
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>Method</strong></h2> 
+        <!-- <h2><strong>set</strong></h2> -->
+        <hr style="margin-top:0px">
+        <img src="images/icra_pipeline.pdf" width="100%" style="margin-bottom:20px;">
+        <p class="text-justify">
+          Our work consists of two main phases: data generation and grasp synthesis. 
+          In the data generation phase, we first mirror right-hand grasps across the pseudo-symmetry plane of the object to obtain left-hand grasp proposals. 
+          By combining the right and left grasps, we then apply an energy-based optimization scheme to construct two-hand grasps. 
+          In the grasp synthesis phase, we propose a two-hand contact representation, as illustrated in the second box, and a two-stage grasp generation pipeline, outlined in the third box. 
+          In the first stage of the generator, we design a diffusion model Text2Dir, conditioned on the object and text, to predict the affordance directions of a grasp. 
+          The object and the predicted affordance directions are subsequently passed to our Dir2Grasp model to generate the final grasp.
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<br>
+<br>
 
 <section>
   <div class="container" style="width:58%">
